@@ -107,9 +107,9 @@ sudo rabbitmqctl set_policy ha-all "^" '{"ha-mode":"all"}'
 sudo rabbitmq-plugins enable rabbitmq_management
 ```
 7. Запуск producer.py и вывод команд  
-`python3 producer.py`
-`sudo rabbitmqadmin get queue='hello'`
-8. Отключение одной из нод и тестирование consumer.py
-`vagrant halt rmq01`
-`connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.100.1'))`  
-`python3 consumer.py`
+`python3 producer.py`  
+`sudo rabbitmqadmin get queue='hello'`  
+8. Отключение одной из нод и тестирование consumer.py  
+`vagrant halt rmq01`  
+`connection = pika.BlockingConnection(pika.ConnectionParameters('192.168.100.1'))`   
+`python3 consumer.py`  
